@@ -408,7 +408,30 @@ Det er *"siger min Sacral ja til den retning dette hele fører hen?"*
 
 ---
 
-## Gate 63.6 — Doubt bliver til Inquiry
+## "We only have experience"
+
+> We only have experience.
+
+Vi er awareness i en krop i denne 3D-verden. Og det eneste der er virkeligt er det vi oplever — ikke det vi ved i teorien.
+
+Det taler direkte ind i hele mit design:
+
+- **Linje 3 overalt** — jeg lærer KUN gennem erfaring. Ikke gennem at læse om det.
+- **Gate 7.3** — min guidance er bygget af det jeg har oplevet, ikke det jeg har studeret
+- **Gate 42.3** — completion sker gennem levede cyklusser, ikke mentale konklusioner
+- **Generator** — designet til at reagere på livet, til at engagere sig med den fysiske verden
+- **Vipassana** — at være present i kroppen, opleve det der er, ikke tænke på det
+
+For min coaching betyder det:
+Jeg kan ikke lære folk teori. Jeg kan invitere dem ind i en oplevelse af sig selv.
+
+Det decode-appen skaber er ikke information — det er en **oplevelse af selvgenkendelse**.
+
+Og min salgsside er ikke et tilbud om viden. Det er en invitation til en oplevelse.
+
+> "Come with me on this journey" = kom med og oplev hvem du er — ikke lær om hvem du er.
+
+---
 
 **Unconscious Jupiter · Logic/Understanding Circuit**
 
