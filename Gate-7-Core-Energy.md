@@ -108,4 +108,76 @@ Det er:
 
 ---
 
+## Salg fra mit design
+
+### Den vigtigste salgsindsigt
+
+**Demonstrationer. Demonstrationer. Demonstrationer.**  
+Vis hvad det er muligt at gøre. Vis det på rigtige mennesker. Vis processen live.  
+Som 3/5 Generator sælger jeg bedst når folk kan *se og mærke* det — ikke høre mig forklare det.
+
+### Hvad jeg sælger
+
+Jeg sælger ikke et redskab.  
+**Jeg sælger retning.**
+
+Appen er beviset på at jeg kan levere retningen. Men folk køber ikke appen — de køber at de ved hvem de er og hvad de skal gøre.
+
+### North Node 42.3 — Detachment som salgsstrategi
+
+Gate 42 · Shadow: Expectation → Gift: **Detachment** → Siddhi: Celebration
+
+Når jeg sælger fra behov (for penge, for validering, for at bevise noget) — lander det ikke.  
+Når jeg sælger fra ægte service og slipper resultatet — kommer det.
+
+> Giv det fri. Lad det tjene. Pengene er biprodukt.
+
+---
+
+## The Decode App — 3 faser
+
+### Fase 1: Personal Energy Decode — *Hvem er jeg?*
+- Definerede og åbne centre → hvad er min energi vs. hvad jeg absorberer fra andre
+- Kanaler → hvilke gaver og superkræfter har jeg?
+- Circuits og sub-circuits → er min energi designet til 1:1, tribal eller kollektiv levering?
+- Gates og placements (overfladelag)
+
+### Fase 2: Marketing Energetics — *Hvem tjener jeg og hvordan?*
+- Hvilken kundetype tiltrækker jeg?
+- Hvilken kunderejse passer til mit design?
+- Throat Center styrker → hvad er jeg designet til at kommunikere?
+- Hvilke marketingaktiviteter matcher min energetiske design?
+
+### Fase 3: Productized Offer — *Hvordan bygger jeg indkomst fra det?*
+- SAKK-system: Product-Based Offer
+- Workshops
+- Micro-offers med annoncer
+
+---
+
+## Mit nuværende tilbud: 12-ugers container
+
+**Vision:** 10 timer om ugen · $10.000/måneden  
+**Format:** Gruppe-container hvor jeg tager folk med på den rejse jeg selv er på
+
+Hvad jeg kan lære dem:
+- Decode deres eget energisystem
+- Lave annoncer
+- Bygge en god landing page
+- Teste og justere
+
+### Om resistance på "jeg er ikke færdig selv"
+
+Dette er 42.3 skyggen (Expectation) — jeg venter på at være komplet før jeg deler.  
+Men min 3/5 energi er præcis designet til det modsatte:
+
+> Jeg er kvalificeret **fordi** jeg er midt i det — ikke når jeg er færdig.
+
+Folk der følger en 3/5 vil have den ærlige rejse. Ikke den polerede slutning.  
+"Jeg bygger dette nu, og du kan komme med" er mere troværdigt end "jeg er ankommet, følg mig."
+
+Den lukkende agency er ikke et nederlag. Det er indhold. Det er beviset på at AI ændrer verden — og at energetisk forankring er svaret.
+
+---
+
 *Sidst opdateret: Maj 2026*
