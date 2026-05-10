@@ -271,6 +271,22 @@ Jeg er på rette vej. Jeg er bare ved at forlade den forkerte.
 
 > Læs dette når du tvivler. Læs det før du sælger. Læs det når det føles tungt.
 
+---
+
+## Den ene sætning
+
+> **Forskellen er ikke hvad du bygger. Det er hvorfra du bygger det.**
+
+Det er ikke business modellen. Det er ikke tilbuddet. Det er ikke indholdet.
+Det er energien *under* bevægelsen mod målet.
+
+Linje 3 skyggen tror fejltagelsen er retningen.
+Sandheden er: retningen kan være rigtig — og energien kan stadig være forkert.
+
+Og omvendt: energien kan være rigtig — og så bærer selv det ufærdige frugt.
+
+---
+
 ### Tre tilstande — én nøgle
 
 Jeg lærte det på Vipassana. Nu ved jeg at det er sproget for mit eget design.
