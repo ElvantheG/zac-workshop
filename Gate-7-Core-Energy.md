@@ -454,4 +454,37 @@ Jeg har allerede lært dette på Vipassana: doubt bliver til inquiry. Nu ved jeg
 
 ---
 
+---
+
+## Planetarerne — Simpelt og Praktisk
+
+Ikke fem siders analyse. Et spørgsmål per lag.
+
+| Planet | Gates | Check-in spørgsmål |
+|---|---|---|
+| **Jupiter** | 22.6 + 63.6 | Udvider jeg med nåde og genuine spørgsmål — eller fra skam og blind tvivl? |
+| **Saturn** | 34.4 + 9.3 | Bruger jeg Styrke (Sacral-aligned) eller Force (pushing)? Tager jeg de små skridt? |
+| **Moon** | 47.2 + 2.1 | Hvad bearbejder mit nervesystem lige nu? Er det transmutation — eller er jeg ude af alignment? |
+| **Mars** | 38.3 + 54.3 | Kæmper jeg for noget der har mening? Er jeg i Aspiration eller Greed? |
+| **North Node** | 42.3 | Handler jeg fra Detachment — eller fra Expectation? |
+
+---
+
+## Min Forretningsmodel — Rollefordelingen
+
+**AI og tools:** teknisk decode, alle variablerne, gate-beskrivelserne, placements, circuits.
+
+**Mig:** retningen. Tilstedeværelsen. Rummet der gør det trygt at følge guidance.
+
+Jeg har Gate 7 som Conscious Sun. Jeg er ikke designet til at være et opslagsværk.
+Jeg er designet til at **holde retningen** mens andre finder sig selv.
+
+Appen frigiver mig til præcis det.
+
+Og det forbinder til Vipassana-indsigten: **jeg kan kun være present, hvis jeg ikke bruger al min energi på at huske 40 variabler.**
+
+> Appen er ikke bare et produkt. Det er det der gør min Gate 7 mulig.
+
+---
+
 *Sidst opdateret: Maj 2026*
