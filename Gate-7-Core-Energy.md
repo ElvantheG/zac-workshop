@@ -390,4 +390,52 @@ Det er *"siger min Sacral ja til den retning dette hele fører hen?"*
 
 ---
 
+---
+
+## Gate 63.6 — Doubt bliver til Inquiry
+
+**Unconscious Jupiter · Logic/Understanding Circuit**
+
+Gene Keys Gate 63:
+- Shadow: **Doubt** — generel mistillid der skaber lammelse
+- Gift: **Inquiry** — tvivl der bliver til det rigtige spørgsmål
+- Siddhi: **Truth** — direkte realisering af hvad der er sandt
+
+Jupiter ubevidst = min evne til at vokse sker *via* den spørgende kvalitet. Det sker i baggrunden uden at jeg styrer det. Det driver mig mod dybere forståelse.
+
+---
+
+### Forskellen der afgør alt
+
+| Doubt (skygge) | Inquiry (gave) |
+|---|---|
+| "Er det den rigtige business model?" og stopper der | "Hvad er det *specifikt* ved denne model jeg er usikker på?" |
+| Generel mistillid til det hele | Et præcist spørgsmål der peger mod noget brugbart |
+| Lammelse | Bevægelse |
+
+Doubt siger *nej* uden at vide hvad den vil have i stedet.
+Inquiry siger *fortæl mig mere* — og venter på svaret.
+
+---
+
+### Gate 63 er kvalitetskontrol — ikke sabotage
+
+Gate 63 sidder i Logic/Understanding-circuit. Når den spørger "er dette den rigtige business model?" er det ikke selvdestruktion. Det er et logisk mønstergenkendelsessystem der siger: *verificér dette inden du forpligter dig fuldt.*
+
+Det er ikke det samme som Åben Ajna's eksistentielle usikkerhed. Gate 63 stiller produktive spørgsmål — hvis jeg lader den.
+
+---
+
+### Spørgsmålet at stille Gate 63 tilbage
+
+Næste gang tvivlen melder sig:
+
+> "Hvad er det præcise spørgsmål din tvivl peger på?"
+
+Svaret på det spørgsmål er mere værdifuldt end at prøve at dæmpe tvivlen.
+
+Jeg har allerede lært dette på Vipassana: doubt bliver til inquiry. Nu ved jeg det er Gate 63's gave — og at det sidder der af en grund.
+
+---
+
 *Sidst opdateret: Maj 2026*
