@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>♠ Poker Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>♠ Poker Calculator</h1>
+      <p class="subtitle">Texas Hold'em Odds & Strategi</p>
+    </header>
+
+    <nav class="tabs">
+      <button class="tab active" data-tab="odds">🎯 Odds Calculator</button>
+      <button class="tab" data-tab="hands">📋 Hånds Styrke</button>
+      <button class="tab" data-tab="outs">🔢 Outs & Pot Odds</button>
+      <button class="tab" data-tab="preflop">🃏 Pre-Flop Guide</button>
+      <button class="tab" data-tab="bot">🤖 Bot Advisor</button>
+    </nav>
+
+    <section id="tab-odds" class="tab-content active">
+      <div class="card">
+        <h2>Beregn dine vinde-chancer</h2>
+        <p class="hint">Vælg dine to hånds-kort, og op til 5 board-kort (flop/turn/river)</p>
+        <div class="section-label">🖐 Dine hånds-kort (vælg 2)</div>
+        <div class="card-picker" id="hole-cards">
+          <div class="card-slot" data-index="0" onclick="openPicker(this)"><span class="add-icon">+</span></div>
+          <div class="card-slot" data-index="1" onclick="openPicker(this)"><span class="add-icon">+</span></div>
+        </div>
+        <div class="section-label">🃏 Board-kort (0–5)</div>
+        <div class="card-picker" id="board-cards">
+          <div class="card-slot" data-index="0" onclick="openPicker(this)"><span class="add-icon">+</span></div>
+          <div class="card-slot" data-index="1" onclick="openPicker(this)"><span class="add-icon">+</span></div>
+          <div class="card-slot" data-index="2" onclick="openPicker(this)"><span class="add-icon">+</span></div>
+          <div class="card-slot" data-index="3" onclick="openPicker(this)"><span class="add-icon">+</span></div>
+          <div class="card-slot" data-index="4" onclick="openPicker(this)"><span class="add-icon">+</span></div>
+        </div>
+        <div class="opponents-row">
+          <label>Antal modstandere:</label>
+          <div class="num-input">
+            <button onclick="changeOpponents(-1)">−</button>
+            <span id="opponent-count">1</span>
+            <button onclick="changeOpponents(1)">+</button>
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calculateOdds()">📊 Beregn Odds</button>
+        <button class="clear-btn" onclick="clearAll()">🗑 Ryd alle</button>
+        <div id="result" class="result-box hidden"></div>
+      </div>
+    </section>
+
+    <section id="tab-hands" class="tab-content hidden">
+      <div class="card">
+        <h2>Poker Hånds Rangering</h2>
+        <div class="hand-list">
+          <div class="hand-item rank-1"><div class="hand-name">👑 Royal Flush</div><div class="hand-example">A♠ K♠ Q♠ J♠ 10♠</div><div class="hand-desc">Ace-high straight flush. Bedst mulige hånd.</div><div class="hand-prob">Sandsynlighed: 0.000154%</div></div>
+          <div class="hand-item rank-2"><div class="hand-name">🔥 Straight Flush</div><div class="hand-example">9♥ 8♥ 7♥ 6♥ 5♥</div><div class="hand-desc">5 kort i rækkefølge, samme kulør.</div><div class="hand-prob">Sandsynlighed: 0.00139%</div></div>
+          <div class="hand-item rank-3"><div class="hand-name">💎 Four of a Kind</div><div class="hand-example">A♠ A♥ A♦ A♣ K♠</div><div class="hand-desc">4 kort med samme værdi.</div><div class="hand-prob">Sandsynlighed: 0.0240%</div></div>
+          <div class="hand-item rank-4"><div class="hand-name">🏠 Full House</div><div class="hand-example">K♠ K♥ K♦ Q♠ Q♥</div><div class="hand-desc">3 ens + 2 ens.</div><div class="hand-prob">Sandsynlighed: 0.1441%</div></div>
+          <div class="hand-item rank-5"><div class="hand-name">♠ Flush</div><div class="hand-example">A♠ J♠ 8♠ 4♠ 2♠</div><div class="hand-desc">5 kort samme kulør.</div><div class="hand-prob">Sandsynlighed: 0.197%</div></div>
+          <div class="hand-item rank-6"><div class="hand-name">➡️ Straight</div><div class="hand-example">9♠ 8♥ 7♦ 6♣ 5♠</div><div class="hand-desc">5 kort i rækkefølge, blandet kulør.</div><div class="hand-prob">Sandsynlighed: 0.392%</div></div>
+          <div class="hand-item rank-7"><div class="hand-name">3️⃣ Three of a Kind</div><div class="hand-example">Q♠ Q♥ Q♦ K♠ 7♣</div><div class="hand-desc">3 kort med samme værdi.</div><div class="hand-prob">Sandsynlighed: 2.11%</div></div>
+          <div class="hand-item rank-8"><div class="hand-name">2️⃣ Two Pair</div><div class="hand-example">J♠ J♥ 8♦ 8♣ A♠</div><div class="hand-desc">2 par af ens kort.</div><div class="hand-prob">Sandsynlighed: 4.75%</div></div>
+          <div class="hand-item rank-9"><div class="hand-name">1️⃣ One Pair</div><div class="hand-example">A♠ A♥ K♦ Q♣ 2♠</div><div class="hand-desc">Ét par ens kort.</div><div class="hand-prob">Sandsynlighed: 42.3%</div></div>
+          <div class="hand-item rank-10"><div class="hand-name">🃏 High Card</div><div class="hand-example">A♠ J♥ 9♦ 6♣ 2♠</div><div class="hand-desc">Ingen kombination.</div><div class="hand-prob">Sandsynlighed: 50.1%</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-outs" class="tab-content hidden">
+      <div class="card">
+        <h2>Outs & Pot Odds Kalkulator</h2>
+        <p class="hint">Beregn om det kan betale sig at calle en bet baseret på dine outs.</p>
+        <div class="form-group">
+          <label>Antal outs:</label>
+          <div class="outs-grid" id="outs-grid"></div>
+          <p class="hint small">Klik på en genvej, eller skriv manuelt:</p>
+          <input type="number" id="outs-input" min="1" max="47" value="9" oninput="updateOutsCalc()" />
+        </div>
+        <div class="form-row">
+          <div class="form-group half"><label>Pot størrelse (kr):</label><input type="number" id="pot-size" value="100" oninput="updateOutsCalc()" /></div>
+          <div class="form-group half"><label>Bet du skal calle (kr):</label><input type="number" id="call-size" value="50" oninput="updateOutsCalc()" /></div>
+        </div>
+        <div class="form-group">
+          <label>Hvornår er du i spillet:</label>
+          <select id="street" onchange="updateOutsCalc()">
+            <option value="flop">Flop (2 kort tilbage)</option>
+            <option value="turn">Turn (1 kort tilbage)</option>
+          </select>
+        </div>
+        <div id="outs-result" class="result-box"></div>
+        <div class="card inner-card">
+          <h3>📚 Typiske Outs Guide</h3>
+          <table class="outs-table">
+            <thead><tr><th>Situation</th><th>Outs</th><th>Flop→River</th><th>Turn→River</th></tr></thead>
+            <tbody>
+              <tr><td>Open-ended straight draw</td><td>8</td><td>31.5%</td><td>17.4%</td></tr>
+              <tr><td>Flush draw</td><td>9</td><td>35.0%</td><td>19.6%</td></tr>
+              <tr><td>Inside straight draw</td><td>4</td><td>16.5%</td><td>8.7%</td></tr>
+              <tr><td>Flush + straight draw</td><td>15</td><td>54.1%</td><td>32.6%</td></tr>
+              <tr><td>Two pair → Full house</td><td>4</td><td>16.5%</td><td>8.7%</td></tr>
+              <tr><td>Set → Full house/Quads</td><td>7</td><td>27.8%</td><td>15.2%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-preflop" class="tab-content hidden">
+      <div class="card">
+        <h2>Pre-Flop Starting Hands Guide</h2>
+        <p class="hint">Hvad er din start-hånd? Klik for at se anbefalingen.</p>
+        <div class="preflop-selector">
+          <div class="form-row">
+            <div class="form-group half"><label>Kort 1:</label><select id="pf-card1" onchange="updatePreflop()"><option value="">-- Vælg --</option></select></div>
+            <div class="form-group half"><label>Kort 2:</label><select id="pf-card2" onchange="updatePreflop()"><option value="">-- Vælg --</option></select></div>
+          </div>
+          <div class="form-group">
+            <label>Suited (samme kulør)?</label>
+            <label class="toggle"><input type="checkbox" id="pf-suited" onchange="updatePreflop()" /><span class="slider"></span></label>
+          </div>
+          <div class="form-group">
+            <label>Position:</label>
+            <select id="pf-position" onchange="updatePreflop()">
+              <option value="early">Early (UTG)</option>
+              <option value="mid" selected>Middle Position</option>
+              <option value="late">Late (Cutoff / Button)</option>
+              <option value="blind">Blinds (SB/BB)</option>
+            </select>
+          </div>
+        </div>
+        <div id="preflop-result" class="result-box hidden"></div>
+        <div class="card inner-card">
+          <h3>🎯 Generelle Pre-Flop Tips</h3>
+          <ul class="tips-list">
+            <li>✅ <strong>Premium hands:</strong> AA, KK, QQ, JJ, AKs – raise altid</li>
+            <li>✅ <strong>Stærke hands:</strong> TT, 99, AQs, AJs – raise fra de fleste positioner</li>
+            <li>⚠️ <strong>Speculative hands:</strong> Suited connectors, small pairs – call/raise fra sen position</li>
+            <li>❌ <strong>Svage hands:</strong> Ragge kort – fold fra early position</li>
+            <li>📍 <strong>Position er nøglen:</strong> Jo senere position, jo flere hænder kan du spille</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-bot" class="tab-content hidden">
+      <div class="card">
+        <h2>🤖 Bot Advisor – Live Beslutningshjælp</h2>
+        <p class="hint">Beskriv din situation – botten analyserer og giver dig en anbefaling.</p>
+        <div class="bot-section">
+          <div class="section-label">👤 Modstander-profil (valgfrit)</div>
+          <div class="form-row">
+            <div class="form-group half"><label>Modstander VPIP% <span class="hint-inline">(0–100)</span></label><input type="number" id="bot-vpip" placeholder="fx 35" min="0" max="100" oninput="botClassifyOpp()" /></div>
+            <div class="form-group half"><label>Modstander PFR% <span class="hint-inline">(0–100)</span></label><input type="number" id="bot-pfr" placeholder="fx 8" min="0" max="100" oninput="botClassifyOpp()" /></div>
+          </div>
+          <div id="bot-opp-result" class="opp-box hidden"></div>
+        </div>
+        <div class="bot-section">
+          <div class="section-label">🃏 Situation</div>
+          <div class="section-label small">Dine 2 hånds-kort</div>
+          <div class="card-picker" id="bot-hole-cards">
+            <div class="card-slot" data-index="0" onclick="openBotPicker(this,'hole')"><span class="add-icon">+</span></div>
+            <div class="card-slot" data-index="1" onclick="openBotPicker(this,'hole')"><span class="add-icon">+</span></div>
+          </div>
+          <div class="section-label small">Board-kort</div>
+          <div class="card-picker" id="bot-board-cards">
+            <div class="card-slot" data-index="0" onclick="openBotPicker(this,'board')"><span class="add-icon">+</span></div>
+            <div class="card-slot" data-index="1" onclick="openBotPicker(this,'board')"><span class="add-icon">+</span></div>
+            <div class="card-slot" data-index="2" onclick="openBotPicker(this,'board')"><span class="add-icon">+</span></div>
+            <div class="card-slot" data-index="3" onclick="openBotPicker(this,'board')"><span class="add-icon">+</span></div>
+            <div class="card-slot" data-index="4" onclick="openBotPicker(this,'board')"><span class="add-icon">+</span></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group half"><label>Din position</label><select id="bot-position"><option value="UTG">UTG (Early)</option><option value="MP">MP (Middle)</option><option value="CO">CO (Cutoff)</option><option value="BTN" selected>BTN (Button)</option><option value="SB">SB</option><option value="BB">BB</option></select></div>
+            <div class="form-group half"><label>Antal modstandere</label><select id="bot-opponents"><option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group half"><label>Pot størrelse</label><input type="number" id="bot-pot" value="100" /></div>
+            <div class="form-group half"><label>Bet at calle (0 = ingen)</label><input type="number" id="bot-call" value="0" /></div>
+          </div>
+        </div>
+        <button class="calc-btn" onclick="runBotAdvisor()">🤖 Få Anbefaling</button>
+        <button class="clear-btn" onclick="clearBotCards()">🗑 Ryd</button>
+        <div id="bot-result" class="result-box hidden"></div>
+        <div class="card inner-card" style="margin-top:1.2rem">
+          <h3>🧠 Spillertyper – Hvad slår dem?</h3>
+          <div class="opp-types-grid">
+            <div class="opp-type-item nit"><strong>🐢 Nit</strong><br>VPIP &lt;15%<br><em>Steal blinds. Value bet thin.</em></div>
+            <div class="opp-type-item tag"><strong>🎯 TAG</strong><br>VPIP 15–25%<br><em>Spil solid GTO.</em></div>
+            <div class="opp-type-item lag"><strong>⚡ LAG</strong><br>VPIP 25–40%<br><em>Trap aggressivt.</em></div>
+            <div class="opp-type-item fish"><strong>🐟 Calling Station</strong><br>VPIP &gt;35%, PFR &lt;12%<br><em>VALUE BET ALTID!</em></div>
+            <div class="opp-type-item maniac"><strong>🌀 Maniac</strong><br>VPIP &gt;50%<br><em>Trap med stærke hænder.</em></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="modal-overlay" class="modal-overlay hidden" onclick="closePickerIfOutside(event)">
+    <div class="modal-box">
+      <div class="modal-header"><h3>Vælg et kort</h3><button onclick="closePicker()">✕</button></div>
+      <div class="rank-buttons" id="rank-buttons"></div>
+      <div class="suit-buttons" id="suit-buttons"></div>
+      <div id="picker-preview" class="picker-preview"></div>
+      <div class="modal-actions">
+        <button class="confirm-btn" onclick="confirmCard()">✓ Vælg</button>
+        <button class="remove-btn" onclick="removeCard()">🗑 Fjern</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="poker.js"></script>
+  <script src="bot-web.js"></script>
+</body>
+</html>
