@@ -19,6 +19,7 @@
       <button class="tab" data-tab="hands">📋 Hånds Styrke</button>
       <button class="tab" data-tab="outs">🔢 Outs & Pot Odds</button>
       <button class="tab" data-tab="preflop">🃏 Pre-Flop Guide</button>
+      <button class="tab" data-tab="bot">🤖 Bot Advisor</button>
     </nav>
 
     <!-- ODDS CALCULATOR TAB -->
@@ -270,6 +271,114 @@
     </div>
   </div>
 
+  <!-- BOT ADVISOR TAB -->
+  <section id="tab-bot" class="tab-content hidden">
+    <div class="card">
+      <h2>🤖 Bot Advisor – Live Beslutningshjælp</h2>
+      <p class="hint">Beskriv din situation live – botten analyserer og giver dig en anbefaling.</p>
+
+      <div class="bot-section">
+        <div class="section-label">👤 Modstander-profil (valgfrit)</div>
+        <div class="form-row">
+          <div class="form-group half">
+            <label>Modstander VPIP% <span class="hint-inline">(0–100)</span></label>
+            <input type="number" id="bot-vpip" placeholder="fx 35" min="0" max="100" oninput="botClassifyOpp()" />
+          </div>
+          <div class="form-group half">
+            <label>Modstander PFR% <span class="hint-inline">(0–100)</span></label>
+            <input type="number" id="bot-pfr" placeholder="fx 8" min="0" max="100" oninput="botClassifyOpp()" />
+          </div>
+        </div>
+        <div id="bot-opp-result" class="opp-box hidden"></div>
+      </div>
+
+      <div class="bot-section">
+        <div class="section-label">🃏 Situation</div>
+
+        <div class="section-label small">Dine 2 hånds-kort</div>
+        <div class="card-picker" id="bot-hole-cards">
+          <div class="card-slot" data-index="0" onclick="openBotPicker(this,'hole')"><span class="add-icon">+</span></div>
+          <div class="card-slot" data-index="1" onclick="openBotPicker(this,'hole')"><span class="add-icon">+</span></div>
+        </div>
+
+        <div class="section-label small">Board-kort</div>
+        <div class="card-picker" id="bot-board-cards">
+          <div class="card-slot" data-index="0" onclick="openBotPicker(this,'board')"><span class="add-icon">+</span></div>
+          <div class="card-slot" data-index="1" onclick="openBotPicker(this,'board')"><span class="add-icon">+</span></div>
+          <div class="card-slot" data-index="2" onclick="openBotPicker(this,'board')"><span class="add-icon">+</span></div>
+          <div class="card-slot" data-index="3" onclick="openBotPicker(this,'board')"><span class="add-icon">+</span></div>
+          <div class="card-slot" data-index="4" onclick="openBotPicker(this,'board')"><span class="add-icon">+</span></div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group half">
+            <label>Din position</label>
+            <select id="bot-position">
+              <option value="UTG">UTG (Early)</option>
+              <option value="MP">MP (Middle)</option>
+              <option value="CO">CO (Cutoff)</option>
+              <option value="BTN" selected>BTN (Button)</option>
+              <option value="SB">SB (Small Blind)</option>
+              <option value="BB">BB (Big Blind)</option>
+            </select>
+          </div>
+          <div class="form-group half">
+            <label>Antal modstandere</label>
+            <select id="bot-opponents">
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group half">
+            <label>Pot størrelse</label>
+            <input type="number" id="bot-pot" value="100" />
+          </div>
+          <div class="form-group half">
+            <label>Bet at calle (0 = ingen)</label>
+            <input type="number" id="bot-call" value="0" />
+          </div>
+        </div>
+      </div>
+
+      <button class="calc-btn" onclick="runBotAdvisor()">🤖 Få Anbefaling</button>
+      <button class="clear-btn" onclick="clearBotCards()">🗑 Ryd</button>
+
+      <div id="bot-result" class="result-box hidden"></div>
+
+      <div class="card inner-card" style="margin-top:1.2rem">
+        <h3>🧠 Spillertyper – Hvad slår dem?</h3>
+        <div class="opp-types-grid">
+          <div class="opp-type-item nit">
+            <strong>🐢 Nit</strong><br>VPIP &lt;15%<br>
+            <em>Steal blinds. Value bet thin. Fold mod 3-bet.</em>
+          </div>
+          <div class="opp-type-item tag">
+            <strong>🎯 TAG</strong><br>VPIP 15–25%<br>
+            <em>Spil solid. Undgå store pots u. stærk hånd.</em>
+          </div>
+          <div class="opp-type-item lag">
+            <strong>⚡ LAG</strong><br>VPIP 25–40%<br>
+            <em>Trap aggressivt. Kald bredt m. gode hænder.</em>
+          </div>
+          <div class="opp-type-item fish">
+            <strong>🐟 Calling Station</strong><br>VPIP &gt;35%, PFR &lt;12%<br>
+            <em>VALUE BET ALTID! Bluff ALDRIG.</em>
+          </div>
+          <div class="opp-type-item maniac">
+            <strong>🌀 Maniac</strong><br>VPIP &gt;50%<br>
+            <em>Trap m. stærke hænder. Lad dem ødelægge sig.</em>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <script src="poker.js"></script>
+  <script src="bot-web.js"></script>
 </body>
 </html>

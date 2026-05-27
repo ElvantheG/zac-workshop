@@ -395,6 +395,45 @@ header h1 {
 .tab-content { display: none; }
 .tab-content.active { display: block; }
 
+/* ===== BOT ADVISOR ===== */
+.bot-section { margin-bottom: 1.2rem; }
+.section-label.small { font-size: .85rem; margin: .7rem 0 .3rem; }
+.hint-inline { font-size: .78rem; color: #888; font-weight: 400; }
+
+.opp-box {
+  padding: .7rem 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #ccc;
+  background: #f5f5f5;
+  margin-top: .5rem;
+  font-size: .88rem;
+}
+.opp-nit     { border-color: #999; background: #f0f0f0; }
+.opp-tag     { border-color: #27ae60; background: #e8f5e9; }
+.opp-lag     { border-color: #f39c12; background: #fff3cd; }
+.opp-fish    { border-color: #3498db; background: #e3f2fd; }
+.opp-maniac  { border-color: #e74c3c; background: #ffebee; }
+.opp-unknown { border-color: #bbb; background: #f5f5f5; }
+
+.opp-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: .5rem;
+  margin-top: .5rem;
+}
+.opp-type-item {
+  padding: .6rem .8rem;
+  border-radius: 8px;
+  font-size: .8rem;
+  line-height: 1.5;
+}
+.opp-type-item em { font-style: italic; color: #555; font-size: .75rem; }
+.nit    { background: #f0f0f0; border-left: 3px solid #999; }
+.tag    { background: #e8f5e9; border-left: 3px solid #27ae60; }
+.lag    { background: #fff3cd; border-left: 3px solid #f39c12; }
+.fish   { background: #e3f2fd; border-left: 3px solid #3498db; }
+.maniac { background: #ffebee; border-left: 3px solid #e74c3c; }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 480px) {
   header h1 { font-size: 1.8rem; }
