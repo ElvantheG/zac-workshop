@@ -24,6 +24,8 @@
 |----------|------|-----------|------|
 | Grand Palace & Wat Phra Kaew | Culture | Morning | ~600 THB |
 | Wat Arun (Temple of Dawn) | Culture | Sunset | ~100 THB |
+| Big Buddha at Wat Paknam | Culture | Morning | Free |
+| Khlong (Canal) longtail boat tour | Sightseeing | Morning | 1,000–1,500 THB |
 | Floating markets (Damnoen Saduak) | Culture/Shopping | Early AM | Free entry |
 | Chatuchak Weekend Market | Shopping | Weekend | Free entry |
 | Chao Phraya river cruise | Sightseeing | Evening | 40–1,500 THB |
@@ -70,6 +72,31 @@ Bangkok's trendy east side. Brunch spots, craft cocktail bars, boutique hotels, 
 **Wat Saket (Golden Mount)** — Climb 318 steps to a gilded chedi with panoramic views of Bangkok's skyline and temples.
 
 **Wat Benchamabophit (Marble Temple)** — Quieter, photogenic, best visited at dawn when monks receive alms.
+
+**Wat Paknam Phasi Charoen (Big Buddha)** — Home to Bangkok's most photogenic giant Buddha — a stunning 69-metre emerald-green seated figure visible from outside and breathtaking from inside the temple's glass-ceilinged hall. Far fewer tourists than the Old City temples. Take the MRT to Bang Phai or a ferry along Khlong Bangkok Yai. Free entry; open daily 8 AM–6 PM.
+
+### Canal Tours (Khlong Tours)
+
+Bangkok was once called the "Venice of the East" — its network of canals (*khlongs*) is still the best way to see the quieter, residential side of the city.
+
+#### Longtail Boat Charter (~1,000–1,500 THB for 1–2 hours)
+Hire a longtail from Tha Chang or Tha Tien pier (near Wat Pho) for a private canal tour. A good route covers:
+- **Khlong Bangkok Noi** — Passes the Royal Barges National Museum (worth a quick stop)
+- **Khlong Bangkok Yai** — Lined with wooden houses, orchid farms, and small riverside temples
+- **Khlong Mon** — The most scenic stretch; locals fish from stilted houses
+
+> 💡 **Tip:** Negotiate the route and price before boarding. Ask to stop at **Wat Arun** on the return — the river approach is the most dramatic angle.
+
+#### Khlong Saen Saep Express Boat (15–22 THB per hop)
+The local commuter canal cuts east–west through the city. Cheap, fast, and very local. Board near Central World (Pratunam pier) heading east toward Ramkhamhaeng, or west toward the Old City.
+
+#### Guided Canal & Community Tours (~800–1,200 THB)
+Several operators run small-group kayak or slow-boat tours through Thonburi's backwater canals, stopping at:
+- Floating markets and roadside shrines
+- Traditional coconut sugar and Thai dessert workshops
+- Community orchid and tropical plant gardens
+
+**Recommended operator:** Bangkok Canal Tour boats from Tha Maharaj pier. Book via Klook or direct at the pier.
 
 ### Cultural Experiences
 
