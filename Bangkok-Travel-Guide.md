@@ -24,7 +24,7 @@
 |----------|------|-----------|------|
 | Grand Palace & Wat Phra Kaew | Culture | Morning | ~600 THB |
 | Wat Arun (Temple of Dawn) | Culture | Sunset | ~100 THB |
-| Big Buddha at Wat Paknam | Culture | Morning | Free |
+| Big Buddha — Wat Bang Phli Yai Nai (near Bang Na) | Culture | Morning | Free |
 | Khlong (Canal) longtail boat tour | Sightseeing | Morning | 1,000–1,500 THB |
 | Floating markets (Damnoen Saduak) | Culture/Shopping | Early AM | Free entry |
 | Chatuchak Weekend Market | Shopping | Weekend | Free entry |
@@ -73,7 +73,9 @@ Bangkok's trendy east side. Brunch spots, craft cocktail bars, boutique hotels, 
 
 **Wat Benchamabophit (Marble Temple)** — Quieter, photogenic, best visited at dawn when monks receive alms.
 
-**Wat Paknam Phasi Charoen (Big Buddha)** — Home to Bangkok's most photogenic giant Buddha — a stunning 69-metre emerald-green seated figure visible from outside and breathtaking from inside the temple's glass-ceilinged hall. Far fewer tourists than the Old City temples. Take the MRT to Bang Phai or a ferry along Khlong Bangkok Yai. Free entry; open daily 8 AM–6 PM.
+**Wat Paknam Phasi Charoen (Big Buddha)** — A stunning 69-metre emerald-green seated Buddha inside a glass-ceilinged hall. Spectacular, but located in western Thonburi — **only worth it if you're staying in central or western Bangkok.** From Bang Na / east Bangkok allow 1.5–2 hrs each way.
+
+**Big Buddha near Bang Na → Wat Bang Phli Yai Nai (Samut Prakan)** — A far better choice if you're staying at Summit Windmill or anywhere in Bang Na. The temple houses the highly revered Luang Pho Yim Buddha and is only 20–30 minutes south by taxi/Grab. Beautiful riverside setting, almost no tourists. Free entry.
 
 ### Canal Tours (Khlong Tours)
 
