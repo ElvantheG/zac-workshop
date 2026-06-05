@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fars dag ❤️</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #fdf3e3 0%, #fde8c8 100%);
+      font-family: 'Georgia', serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .scene {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      max-width: 600px;
+      width: 100%;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .scene.active {
+      display: flex;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .emoji {
+      font-size: 80px;
+      margin-bottom: 20px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-10px); }
+    }
+
+    h1 {
+      font-size: clamp(1.6rem, 5vw, 2.4rem);
+      color: #5c3d1e;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    p.sub {
+      font-size: 1rem;
+      color: #8b6345;
+      margin-bottom: 40px;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+    }
+
+    button {
+      padding: 14px 36px;
+      font-size: 1.1rem;
+      font-family: inherit;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .btn-yes {
+      background: #e8975a;
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(232, 151, 90, 0.45);
+    }
+
+    .btn-yes:hover {
+      transform: scale(1.06);
+      box-shadow: 0 6px 20px rgba(232, 151, 90, 0.6);
+    }
+
+    .btn-no {
+      background: #fff;
+      color: #c97a46;
+      border: 2px solid #e8c09a;
+      position: fixed; /* so it can escape anywhere on screen */
+      transition: none;
+    }
+
+    /* Final scene styles */
+    #scene-final .emoji {
+      animation: spin 1s ease forwards;
+    }
+
+    @keyframes spin {
+      0%   { transform: rotate(0deg) scale(0.5); opacity: 0; }
+      60%  { transform: rotate(375deg) scale(1.15); opacity: 1; }
+      100% { transform: rotate(360deg) scale(1); opacity: 1; }
+    }
+
+    #scene-final h1 {
+      color: #c0392b;
+    }
+
+    .confetti-wrap {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .confetti-piece {
+      position: absolute;
+      width: 10px; height: 10px;
+      border-radius: 2px;
+      animation: fall linear forwards;
+    }
+
+    @keyframes fall {
+      0%   { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+    }
+
+    .detail-box {
+      background: #fff;
+      border-radius: 18px;
+      padding: 24px 32px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      margin-top: 24px;
+      color: #5c3d1e;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .detail-box strong {
+      color: #c97a46;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Scene 1 -->
+<div class="scene active" id="scene-1">
+  <div class="emoji">👨‍👧</div>
+  <h1>Er du verdens bedste far?</h1>
+  <p class="sub">Tænk dig godt om… 🤔</p>
+  <div class="btn-row">
+    <button class="btn-yes" onclick="next('scene-2')">Ja, naturligvis!</button>
+    <button class="btn-no" id="no-1">Nej</button>
+  </div>
+</div>
+
+<!-- Scene 2 -->
+<div class="scene" id="scene-2">
+  <div class="emoji">🏆</div>
+  <h1>Fortjener du at blive forkælet på Fars dag?</h1>
+  <p class="sub">Det rigtige svar er allerede valgt for dig 😏</p>
+  <div class="btn-row">
+    <button class="btn-yes" onclick="next('scene-3')">Selvfølgelig!</button>
+    <button class="btn-no" id="no-2">Nej tak</button>
+  </div>
+</div>
+
+<!-- Scene 3 -->
+<div class="scene" id="scene-3">
+  <div class="emoji">🍽️</div>
+  <h1>Vil du med ud at spise til Fars dag?</h1>
+  <p class="sub">Jeg sætter pris på dig hver eneste dag ❤️</p>
+  <div class="btn-row">
+    <button class="btn-yes" onclick="next('scene-final')">Ja! Det vil jeg gerne!</button>
+    <button class="btn-no" id="no-3">Nej</button>
+  </div>
+</div>
+
+<!-- Final scene -->
+<div class="scene" id="scene-final">
+  <div class="emoji">🎉</div>
+  <h1>Hurra! Det bliver fantastisk!</h1>
+  <p class="sub">Glæder mig til at fejre dig — du er den bedste far! ❤️</p>
+  <div class="detail-box">
+    📅 <strong>Fars dag</strong> — søndag den 7. juni<br/>
+    🍴 Vi går ud at spise!<br/>
+    🎁 Resten er en overraskelse 😄
+  </div>
+  <div class="confetti-wrap" id="confetti"></div>
+</div>
+
+<script>
+  function next(sceneId) {
+    document.querySelectorAll('.scene').forEach(s => s.classList.remove('active'));
+    const scene = document.getElementById(sceneId);
+    scene.classList.add('active');
+
+    if (sceneId === 'scene-final') launchConfetti();
+
+    // Re-position the "nej" button for the new scene after transition
+    const noId = { 'scene-2': 'no-2', 'scene-3': 'no-3' }[sceneId];
+    if (noId) placeBtnNearRow(noId);
+  }
+
+  // Keep track of how many times the button has run away
+  const escapeCounts = {};
+
+  function makeBtnRun(btn) {
+    const id = btn.id;
+    escapeCounts[id] = (escapeCounts[id] || 0) + 1;
+
+    const margin = 20;
+    const bw = btn.offsetWidth  || 100;
+    const bh = btn.offsetHeight || 48;
+    const maxX = window.innerWidth  - bw - margin;
+    const maxY = window.innerHeight - bh - margin;
+
+    // Try up to 10 random positions that are far enough from current position
+    const cx = btn.getBoundingClientRect().left;
+    const cy = btn.getBoundingClientRect().top;
+
+    let nx, ny, attempts = 0;
+    do {
+      nx = margin + Math.random() * maxX;
+      ny = margin + Math.random() * maxY;
+      attempts++;
+    } while (attempts < 10 && Math.hypot(nx - cx, ny - cy) < 120);
+
+    btn.style.left = nx + 'px';
+    btn.style.top  = ny + 'px';
+
+    // After 5 escapes, show a little taunt
+    if (escapeCounts[id] === 5) {
+      btn.textContent = '🏃 Nej!';
+    } else if (escapeCounts[id] === 10) {
+      btn.textContent = '😅 Aldrig!';
+    }
+  }
+
+  function placeBtnNearRow(btnId) {
+    const btn = document.getElementById(btnId);
+    if (!btn) return;
+    // Initially place it roughly where it would normally appear
+    // (next to the yes-button row area)
+    const row = btn.closest('.btn-row');
+    if (!row) return;
+    const rect = row.getBoundingClientRect();
+    btn.style.left = (rect.right - btn.offsetWidth - 10) + 'px';
+    btn.style.top  = rect.top + 'px';
+  }
+
+  function initNoButton(id) {
+    const btn = document.getElementById(id);
+    if (!btn) return;
+
+    // Set initial position
+    placeBtnNearRow(id);
+
+    btn.addEventListener('mouseover', () => makeBtnRun(btn));
+    btn.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      makeBtnRun(btn);
+    }, { passive: false });
+  }
+
+  // Init all no-buttons after page load
+  window.addEventListener('load', () => {
+    initNoButton('no-1');
+    initNoButton('no-2');
+    initNoButton('no-3');
+  });
+
+  // Reposition on resize
+  window.addEventListener('resize', () => {
+    ['no-1','no-2','no-3'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (!btn) return;
+      const bw = btn.offsetWidth;
+      const bh = btn.offsetHeight;
+      const x  = parseFloat(btn.style.left) || 0;
+      const y  = parseFloat(btn.style.top)  || 0;
+      btn.style.left = Math.min(x, window.innerWidth  - bw - 20) + 'px';
+      btn.style.top  = Math.min(y, window.innerHeight - bh - 20) + 'px';
+    });
+  });
+
+  // Confetti
+  function launchConfetti() {
+    const wrap = document.getElementById('confetti');
+    const colors = ['#e8975a','#f5c842','#e85a5a','#5ab4e8','#a0e85a','#e85ab4'];
+    for (let i = 0; i < 80; i++) {
+      const el = document.createElement('div');
+      el.className = 'confetti-piece';
+      el.style.left            = Math.random() * 100 + 'vw';
+      el.style.background      = colors[Math.floor(Math.random() * colors.length)];
+      el.style.animationDuration = (1.5 + Math.random() * 2) + 's';
+      el.style.animationDelay  = (Math.random() * 1.5) + 's';
+      el.style.width           = (8 + Math.random() * 8) + 'px';
+      el.style.height          = (8 + Math.random() * 8) + 'px';
+      wrap.appendChild(el);
+    }
+  }
+</script>
+</body>
+</html>
