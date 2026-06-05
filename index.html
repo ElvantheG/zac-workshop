@@ -99,8 +99,12 @@
       background: #fff;
       color: #c97a46;
       border: 2px solid #e8c09a;
-      position: fixed; /* so it can escape anywhere on screen */
       transition: none;
+    }
+
+    .btn-no.running {
+      position: fixed;
+      z-index: 999;
     }
 
     /* Final scene styles */
@@ -209,10 +213,7 @@
     scene.classList.add('active');
 
     if (sceneId === 'scene-final') launchConfetti();
-
-    // Re-position the "nej" button for the new scene after transition
-    const noId = { 'scene-2': 'no-2', 'scene-3': 'no-3' }[sceneId];
-    if (noId) placeBtnNearRow(noId);
+    else initNoButtonForScene(sceneId);
   }
 
   // Keep track of how many times the button has run away
@@ -250,52 +251,48 @@
     }
   }
 
-  function placeBtnNearRow(btnId) {
-    const btn = document.getElementById(btnId);
-    if (!btn) return;
-    // Initially place it roughly where it would normally appear
-    // (next to the yes-button row area)
-    const row = btn.closest('.btn-row');
-    if (!row) return;
-    const rect = row.getBoundingClientRect();
-    btn.style.left = (rect.right - btn.offsetWidth - 10) + 'px';
-    btn.style.top  = rect.top + 'px';
-  }
-
   function initNoButton(id) {
     const btn = document.getElementById(id);
     if (!btn) return;
 
-    // Set initial position
-    placeBtnNearRow(id);
+    const yesBtn = btn.closest('.btn-row').querySelector('.btn-yes');
+    const yesRect = yesBtn.getBoundingClientRect();
 
-    btn.addEventListener('mouseover', () => makeBtnRun(btn));
-    btn.addEventListener('touchstart', (e) => {
-      e.preventDefault();
+    // Target: right next to the yes button
+    const targetLeft = yesRect.right + 12;
+    const targetTop  = yesRect.top + (yesRect.height - (btn.offsetHeight || 50)) / 2;
+
+    // Start offscreen to the right, same height as yes button
+    btn.style.position = 'fixed';
+    btn.style.left = window.innerWidth + 'px';
+    btn.style.top  = targetTop + 'px';
+
+    // Creep in slowly after a short pause
+    setTimeout(() => {
+      btn.style.transition = 'left 2.5s cubic-bezier(0.1, 0.8, 0.3, 1)';
+      btn.style.left = targetLeft + 'px';
+    }, 300);
+
+    function escape(e) {
+      if (e.type === 'touchstart') e.preventDefault();
+      btn.style.transition = 'none';
       makeBtnRun(btn);
-    }, { passive: false });
+    }
+
+    btn.addEventListener('mouseover', escape);
+    btn.addEventListener('touchstart', escape, { passive: false });
+  }
+
+  function initNoButtonForScene(sceneId) {
+    const noId = { 'scene-1': 'no-1', 'scene-2': 'no-2', 'scene-3': 'no-3' }[sceneId];
+    if (noId) setTimeout(() => initNoButton(noId), 50);
   }
 
   // Init all no-buttons after page load
   window.addEventListener('load', () => {
     initNoButton('no-1');
-    initNoButton('no-2');
-    initNoButton('no-3');
   });
 
-  // Reposition on resize
-  window.addEventListener('resize', () => {
-    ['no-1','no-2','no-3'].forEach(id => {
-      const btn = document.getElementById(id);
-      if (!btn) return;
-      const bw = btn.offsetWidth;
-      const bh = btn.offsetHeight;
-      const x  = parseFloat(btn.style.left) || 0;
-      const y  = parseFloat(btn.style.top)  || 0;
-      btn.style.left = Math.min(x, window.innerWidth  - bw - 20) + 'px';
-      btn.style.top  = Math.min(y, window.innerHeight - bh - 20) + 'px';
-    });
-  });
 
   // Confetti
   function launchConfetti() {
