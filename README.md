@@ -50,3 +50,6 @@ python3 bot.py
 ├── bot.py       ← Python CLI bot
 └── ANALYSE.md   ← Strategi-analyse: hvorfor folk vinder/taber
 ```
+
+## HJERNE-MASTER
+[[HJERNE-MASTER|HJERNE-MASTER]] · [[_Admin/CROSS-DOMAIN-BRIDGES|Cross-Domain Bridges]]

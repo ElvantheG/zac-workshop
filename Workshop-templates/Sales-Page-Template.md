@@ -168,3 +168,6 @@ When rebuilding this for HD/energetics:
 - [ ] Two-tier pricing: standard + workshop-attendee discount
 - [ ] Personal CTA: DM/email me directly (not a Stripe form)
 - [ ] Case study: client revenue/transformation in MY niche
+
+## HJERNE-MASTER
+[[HJERNE-MASTER|HJERNE-MASTER]] · [[_Admin/CROSS-DOMAIN-BRIDGES|Cross-Domain Bridges]]

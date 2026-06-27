@@ -216,3 +216,6 @@ If your total is **60 minutes**, scale to:
 - **Total: 60 min · 32 slides**
 
 If your total is **90 minutes**: use Zac's 45-slide structure as-is.
+
+## HJERNE-MASTER
+[[HJERNE-MASTER|HJERNE-MASTER]] · [[_Admin/CROSS-DOMAIN-BRIDGES|Cross-Domain Bridges]]

@@ -219,3 +219,6 @@ Set-mining: Brug kun hvis du kan vinde 10–15x call-størrelse ved hit
 ---
 
 *Analyse bygget på research fra PokerNews, 888poker, ThePokerBank, BlackRain79, ScienceDaily, Jared Tendler, Cornell University GTO study, ResearchGate mathematical principles study, og 10+ andre kilder.*
+
+## HJERNE-MASTER
+[[HJERNE-MASTER|HJERNE-MASTER]] · [[_Admin/CROSS-DOMAIN-BRIDGES|Cross-Domain Bridges]]

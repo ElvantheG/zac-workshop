@@ -718,3 +718,6 @@ Position forklarer ~8–12% af hånd-outcome variance (R² ≈ 0.08–0.12)
 ---
 
 *Analyse baseret på 50+ kilder. Alle algoritmer og kode-eksempler er til lovlig brug i træningsværktøjer, simulatorer og personlige studier.*
+
+## HJERNE-MASTER
+[[HJERNE-MASTER|HJERNE-MASTER]] · [[_Admin/CROSS-DOMAIN-BRIDGES|Cross-Domain Bridges]]
